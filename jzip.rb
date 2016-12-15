@@ -25,16 +25,16 @@ class Jzip < Formula
 end
 
 __END__
-diff --git a/osdepend.c b/osdepend.c
-index 12c8bc4..bf62f06 100644
---- a/osdepend.c
-+++ b/osdepend.c
-@@ -87,7 +87,7 @@ static int strictz_error_count[STRICTZ_NUM_ERRORS];
- /* getopt linkages */
+diff --git a/unixio.mak b/unixio.mak
+index d6b851a..ccb3082 100644
+--- a/unixio.mak
++++ b/unixio.mak
+@@ -49,7 +49,7 @@ OPTIMIZE = -O2
+ #OPTIMIZE = 
+ #OPTIMIZE = -pg -ansi -pedantic
  
- extern int optind;
--extern const char *optarg;
-+// extern const char *optarg;
- extern ZINT16 default_fg, default_bg;
+-CFLAGS = $(OPTIMIZE) -DPOSIX -DHAVE_GETOPT -DHARD_COLORS -DUSE_ZLIB
++CFLAGS = $(OPTIMIZE) -DPOSIX -DHAVE_GETOPT -DHARD_COLORS
  
- #endif /* !defined(AMIGA) */
+ #LIBS = -lcurses
+ LIBS = -lz -ltermcap
